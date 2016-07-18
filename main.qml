@@ -20,7 +20,7 @@ ApplicationWindow {
         text: "just some text"
     }
 
-    Button{
+    Button {
         anchors.horizontalCenter: parent.horizontalCenter
         y: parent.height * 2 / 3
         text: "Do some"
