@@ -1,5 +1,7 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
+// that's for the 2nd option only
+import io.qt.Backend 1.0
 
 ApplicationWindow {
     visible: true
@@ -11,6 +13,11 @@ ApplicationWindow {
     height: 350
     minimumHeight: 350
     maximumHeight: 350
+
+    // that's for the 2nd option only
+    Backend {
+        id: backend
+    }
 
     Text {
         id: someTxt
