@@ -28,12 +28,21 @@ ApplicationWindow {
     }
 
     Button {
+        id: btn
         anchors.horizontalCenter: parent.horizontalCenter
         y: parent.height * 2 / 3
         text: "Do some"
         onClicked: {
             // here we call our C++ backend
-            someTxt.text = backend.doSome()
+            someTxt.text = backend.doSome();
+        }
+    }
+
+    // we can also connect to signals from C++ backend like this
+    Connections {
+        target: backend
+        onSomeThing: {
+            console.log(smthing);
         }
     }
 }

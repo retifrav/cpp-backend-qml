@@ -10,6 +10,9 @@ class Backend : public QObject
 public:
     Backend();
 
+signals:
+    void someThing(QByteArray smthing);
+
 public slots:
     // that's our backend method
     QString doSome();
